@@ -1,0 +1,28 @@
+{
+  "name": "angular-startkit",
+  "version": "0.1.0",
+  "description": "AngularJS StartKit",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bower": "latest",
+    "express": "^4.0.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uodyne/angular-basic"
+  },
+  "keywords": [
+    "node",
+    "angularjs"
+  ],
+  "author": "uodyne",
+  "license": "MIT"
+}
+

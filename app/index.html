@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS StartKit</title>
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="resources/css/app.css">
+</head>
+<body>
+    
+    <div class="ng-cloak" ng-controller="MainCtrl">
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="pull-right label">Current route: <span ng-bind="$routeSegment.name"></span></div>
+                    <a class="brand" href="./">AngularJS StartKit</a>
+                    <ul class="nav">
+                        <li ng-class="{active: ('s1' | routeSegmentStartsWith)}">
+                            <a href="#{{'s1' | routeSegmentUrl}}">Section 1</a>
+                        </li>
+                        <li ng-class="{active: ('s2' | routeSegmentStartsWith)}">
+                            <a href="#{{'s2' | routeSegmentUrl}}">Section 2</a>
+                        </li>
+                        <li ng-class="{active: ('s3' | routeSegmentStartsWith)}">
+                            <a href="#{{'s3' | routeSegmentUrl}}">Section 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container" id="content">
+            <div class="row anim" app-view-segment="0"></div>
+        </div>
+
+        <div id=loading class=alert ng-show="loader.show">Loading...</div>
+    
+    </div>
+
+
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/angular-route/angular-route.min.js"></script>
+    <script src="components/angular-animate/angular-animate.min.js"></script>
+    <script src="components/angular-route-segment/build/angular-route-segment.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+   
+</body>
+</html>

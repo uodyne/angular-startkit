@@ -1,0 +1,6 @@
+{
+  "name": "AngularJS StartKit",
+  "description": "AngularJS Starter Kit with NodeJS",
+  "repository": "https://github.com/uodyne/angular-basic",
+  "keywords": ["node", "express", "heroku", "angularjs", "static"]
+}
