@@ -6,6 +6,7 @@ app.config(function($routeSegmentProvider, $routeProvider) {
         .when('/base', 's1')
         .when('/base/helloworld',   's1.helloworld')
         .when('/base/directivas',   's1.directivas')
+        .when('/base/filtros',   's1.filtros')
         .segment('s1', {
             templateUrl: 'templates/home.html',
             controller: 'MainCtrl'})

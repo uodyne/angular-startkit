@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngAnimate', 'route-segment', 'view-segment']);
+var app = angular.module('myapp', ['ngRoute', 'ngAnimate', 'route-segment', 'view-segment']);
 app.value('loader', {show: false});
 
 function replaceText(str)
