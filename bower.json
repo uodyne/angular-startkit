@@ -6,10 +6,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular": "1.2.x",
-    "angular-resource": "~1.2.x",
-    "angular-route": "~1.2.x",
-    "angular-animate": "~1.2.x",
-    "angular-route-segment": "~1.3.x"
+    "angular": "1.3.x",
+    "angular-resource": "latest",
+    "angular-route": "latest",
+    "angular-animate": "latest",
+    "angular-route-segment": "latest"
   }
 }
