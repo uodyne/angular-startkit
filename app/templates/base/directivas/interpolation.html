@@ -1,0 +1,15 @@
+<h2>Interpolation Directives</h2>
+
+<pre class="prettyprint">
+ &lt;div ng-controller=&quot;MyController&quot; &gt;
+      &lt;span&gt;{{myData.textf()}}&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+    .controller(&quot;MyController&quot;, function($scope) {
+      $scope.myData = {};
+      $scope.myData.textf = function() { return &quot;A text from a function&quot;; };
+    });
+  &lt;/script&gt;
+</pre>

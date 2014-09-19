@@ -18,12 +18,12 @@
 }
 
 .anim.ng-enter {
-	transition: opacity 1s;
-	opacity: 0.0;
+/*	transition: opacity 1s;
+	opacity: 0.0; */
 }
 
 .anim.ng-enter-active {
-	opacity: 1.0;
+/*	opacity: 1.0; */
 }
 .anim.ng-leave {
     display: none;
@@ -41,4 +41,14 @@
     background-image: none;
     background-color: #1b1b1b;
     border: 0;
+}
+.prettyprint ol.linenums {
+    padding:0;
+    margin:6px;
+}
+.prettyprint {
+    font-size:9pt;
+}
+.prettyprint ol.linenums li {
+    line-height: 12pt;
 }
