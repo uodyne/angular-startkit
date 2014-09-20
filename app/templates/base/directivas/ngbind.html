@@ -4,6 +4,14 @@
 &lt;div ng-controller=&quot;MyController&quot; &gt;
   &lt;span ng-bind=&quot;myData.textf()&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
+
+  &lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+    .controller(&quot;MyController&quot;, function($scope) {
+      $scope.myData = {};
+      $scope.myData.textf = function() { return &quot;A text from a function&quot;; };
+    });
+  &lt;/script&gt;
 </pre>
 
 <h3>Escaping HTML From The Model</h3>
@@ -12,4 +20,12 @@
 &lt;div ng-controller=&quot;MyController&quot; &gt;
   &lt;span ng-bind-html-unsafe=&quot;myData.textf()&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
+
+  &lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+    .controller(&quot;MyController&quot;, function($scope) {
+      $scope.myData = {};
+      $scope.myData.textf = function() { return &quot;A text from a function&quot;; };
+    });
+  &lt;/script&gt;
 </pre>

@@ -1,0 +1,10 @@
+<h2>To Variables</h2>
+
+<pre class="prettyprint">
+&lt;ol&gt;
+    &lt;li ng-repeat=&quot;item in filteredItems = ( myData.items | filter:filterArray) &quot;&gt;
+        {{item.text}} : {{$first}}, {{$middle}}, {{$last}}
+    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;{{filteredItems.length}}&lt;/div&gt;
+</pre>

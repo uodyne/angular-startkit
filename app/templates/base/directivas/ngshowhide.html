@@ -1,0 +1,16 @@
+<h2>ng-show & ng-hide</h2>
+
+<pre class="prettyprint">
+  &lt;div ng-controller=&quot;MyController&quot; &gt;
+      &lt;span ng-show=&quot;myData.showIt&quot;&gt;&lt;/span&gt;
+      &lt;span ng-hide=&quot;myData.showIt&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+    .controller(&quot;MyController&quot;, function($scope) {
+      $scope.myData = {};
+      $scope.myData.showIt = true;
+    });
+  &lt;/script&gt;
+</pre>

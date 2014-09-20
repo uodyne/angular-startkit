@@ -9,6 +9,10 @@ AngularJS
 NodeJS
 + Express
 
+## URL
+http://darkant.com/angular-startkit/
+
+
 ## Running Locally
 Make sure you have [Node.js](http://nodejs.org/) 
 

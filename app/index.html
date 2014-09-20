@@ -15,14 +15,23 @@
             <div class="navbar-inner">
                 <div class="container">
                     <ul class="nav">
-                        <li ng-class="{active: ('s1' | routeSegmentStartsWith)}">
-                            <a href="#{{'s1' | routeSegmentUrl}}">Base</a>
+                        <li ng-class="{active: $routeSegment.startsWith('home')}">
+                            <a href="#{{'home' | routeSegmentUrl}}">Home</a>
+                        </li>
+                        <li ng-class="{active: $routeSegment.startsWith('base')}">
+                            <a href="#{{'base' | routeSegmentUrl}}">Base</a>
                         </li>
                         <li>
-                            <a>Docs</a>
+                            <a>Advanced</a>
                         </li>
                         <li>
-                            <a>Otros...</a>
+                            <a>Examples</a>
+                        </li>
+                        <li ng-class="{active: $routeSegment.startsWith('routesegment')}">
+                            <a href="#{{'routesegment' | routeSegmentUrl}}">route-segment</a>
+                        </li>
+                        <li>
+                            <a>ui-bootstrap</a>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +42,7 @@
             <div class="row anim" app-view-segment="0"></div>
         </div>
 
-        <div id=loading class=alert ng-show="loader.show">Loading...</div>
+        <div id=loading class="alert alert-info text-center" ng-show="loader.show">Loading...</div>
     
 
         <div class="text-center"><span ng-bind="$routeSegment.name"></span></div>

@@ -1,0 +1,25 @@
+<div>
+    <div class="span2">
+        <div class="well">
+            <ul class="nav nav-list">
+            
+                <li ng-class="{active: $routeSegment.startsWith('base.helloworld')}">
+                    <a href="#{{ 'base.helloworld' | routeSegmentUrl }}">helloWorld</a>
+                </li>
+                <li ng-class="{active: $routeSegment.startsWith('base.directivas')}">
+                    <a href="#{{ 'base.directivas' | routeSegmentUrl }}">Directives</a>
+                </li>
+                <li ng-class="{active: $routeSegment.startsWith('base.filtros')}">
+                    <a href="#{{ 'base.filtros' | routeSegmentUrl }}">Filters</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+        
+        
+        
+    </div>
+    
+    <div class="span10 anim" app-view-segment="1"></div>
+</div>

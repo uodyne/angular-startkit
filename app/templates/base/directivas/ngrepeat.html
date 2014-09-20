@@ -1,0 +1,97 @@
+<h2>ng-repeat</h2>
+
+<pre class="prettyprint">
+&lt;ol&gt;
+   &lt;li ng-repeat=&quot;theItem in myData.items&quot;&gt;{{theItem.text}}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+    .controller(&quot;MyController&quot;, function($scope) {
+        $scope.myData = {};
+        $scope.myData.items = [ {text : &quot;one&quot;}, {text : &quot;two&quot;}, {text : &quot;three&quot;} ];
+    });
+&lt;/script&gt;
+</pre>
+
+<h3>Iterate over collections</h3>
+
+<pre class="prettyprint">
+&lt;ol&gt;
+   &lt;li ng-repeat=&quot;theItem in myData.getItems()&quot;&gt;{{theItem.text}}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+    .controller(&quot;MyController&quot;, function($scope) {
+        $scope.myData = {};
+        $scope.myData.items = [ {text : &quot;one&quot;}, {text : &quot;two&quot;}, {text : &quot;three&quot;} ];
+        $scope.myData.getItems = function() { return this.items; };
+    });
+&lt;/script&gt;
+</pre>
+
+
+<h3>Iterate over the properties</h3>
+
+<pre class="prettyprint">
+&lt;ol&gt;
+   &lt;li ng-repeat=&quot;(name, value) in myData.myObject&quot;&gt;{{name}} = {{value}}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+    .controller(&quot;MyController&quot;, function($scope) {
+        $scope.myData = {};
+        $scope.myData.myObject = { var1 : &quot;val1&quot;, var2 : &quot;val3&quot;, var3 : &quot;val3&quot;};
+    });
+&lt;/script&gt;
+</pre>
+
+
+<h3>ng-repeat variables</h3>
+
+<pre class="prettyprint">
+  $index
+  $first
+  $middle
+  $last
+</pre>
+
+<h3>Multiple elements</h3>
+
+<pre class="prettyprint">
+&lt;div ng-repeat=&quot;(name, value) in myData.myObject&quot;&gt;
+   &lt;div&gt;{{name}}&lt;/li&gt;
+   &lt;div&gt;{{value}}&lt;/li&gt;
+&lt;/div&gt;
+</pre>
+
+<h3>ng-repeat-start and ng-repeat-end</h3>
+
+<pre class="prettyprint">
+&lt;ol&gt;
+    &lt;li ng-repeat-start=&quot;(name, value) in myData.myObject&quot;&gt;{{name}}&lt;/li&gt;
+    &lt;li ng-repeat-end&gt;{{value}}&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h3>Filtering</h3>
+
+<pre class="prettyprint">
+&lt;div ng-repeat=&quot;item in myData.items | filter: itemFilter&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  angular.module(&quot;myapp&quot;, [])
+    .controller(&quot;MyController&quot;, function($scope) {
+      $scope.myData = {};
+      $scope.myData.items  = [ {text : &quot;one&quot;}, {text : &quot;two&quot;}, {text : &quot;three&quot;}, {text : &quot;four&quot;} ];
+
+      $scope.itemFilter = function(item) {
+        if(item.text == &quot;two&quot;) return false;
+          return true;
+        }
+      }
+    });
+&lt;/script&gt;
+</pre>
+

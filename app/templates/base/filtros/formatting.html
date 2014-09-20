@@ -1,0 +1,27 @@
+<h2>Formatting</h2>
+
+<pre class="prettyprint">
+date        =   Formats the variable as a date according to the given date format
+currency    =   Formats the variable as a number with a currency symbol
+number      =   Formats the variable as a number
+lowercase   =   Converts the variable to lowercase
+uppercase   =   Converts the variable to uppercase
+json        =   Converts the variable to a JSON string
+</pre>
+
+<h3>data example</h3>
+<pre class="prettyprint">
+&lt;span&gt;{{myData.theDate | date: &#039;dd-MM-yyyy&#039;}}&lt;/span&gt;
+</pre>
+
+<h3>number example</h3>
+<pre class="prettyprint">
+&lt;span&gt;{{myData.theNumber | number: 2}}&lt;/span&gt;
+</pre>
+
+<h3>lower and uppercase example</h3>
+<pre class="prettyprint">
+&lt;span&gt;{{myData.mixedCaseText | lowercase}}&lt;/span&gt;
+&lt;span&gt;{{myData.mixedCaseText | uppercase}}&lt;/span&gt;
+</pre>
+

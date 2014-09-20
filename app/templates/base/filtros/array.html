@@ -1,0 +1,55 @@
+<h2>Array</h2>
+
+<pre class="prettyprint">
+limitTo     =   Limits the array to the given size, beginning from some index in the array.
+                The limitTo filter also works on strings.
+filter      =   A general purpose filter.
+orderBy     =   Sorts the array based on provided criteria.
+</pre>
+
+<h3>limitTo example</h3>
+<pre class="prettyprint">
+&lt;span&gt;{{myData.theText | limitTo: 3}}&lt;/span&gt;
+</pre>
+
+<h3>filter example</h3>
+<pre class="prettyprint">
+&lt;ol&gt;
+    &lt;li ng-repeat=&quot;item in myData.items | filter:filterArray&quot;&gt;
+        {{item.text}} : {{$first}}, {{$middle}}, {{$last}}
+    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+        .controller(&quot;MyController&quot;, function($scope) {
+            $scope.myData = {};
+            $scope.myData.items    = 
+                [ {text : &quot;one&quot;}, {text : &quot;two&quot;}, {text : &quot;three&quot;}, {text : &quot;four&quot;} ];
+
+            $scope.filterArray = function(item) {
+                if(item.text == &quot;two&quot;) return false;
+                return true;
+            }
+        } );
+&lt;/script&gt;
+</pre>
+
+<h3>orderBy example</h3>
+<pre class="prettyprint">
+&lt;ol&gt;
+    &lt;li ng-repeat=&quot;item in myData.items | orderBy:sortField:reverse&quot;&gt;
+        {{item.text}} : {{$first}}, {{$middle}}, {{$last}}
+    &lt;/li&gt;
+&lt;/ol&gt;
+    
+&lt;script&gt;
+    angular.module(&quot;myapp&quot;, [])
+            .controller(&quot;MyController&quot;, function($scope) {
+                $scope.myData = {};
+                $scope.myData.items    = [ {text : &quot;one&quot;}, {text : &quot;two&quot;}, {text : &quot;three&quot;}, {text : &quot;four&quot;} ];
+                $scope.sortField = &quot;text&quot;;
+                $scope.reverse   = true;
+            } );
+&lt;/script&gt;
+</pre>
+

@@ -1,0 +1,19 @@
+<h2>Filters</h2>
+<ul class="nav nav-tabs">
+    <li ng-class="{active: $routeSegment.contains('formatting')}">
+        <a href="#/base/filtros/formatting">Formatting</a>
+    </li>
+    <li ng-class="{active: $routeSegment.contains('array')}">
+        <a href="#/base/filtros/array">Array</a>
+    </li>
+    <li ng-class="{active: $routeSegment.contains('chaining')}">
+        <a href="#/base/filtros/chaining">Chaining</a>
+    </li>
+    <li ng-class="{active: $routeSegment.contains('tovariables')}">
+        <a href="#/base/filtros/tovariables">To Variables</a>
+    </li>
+    <li ng-class="{active: $routeSegment.contains('custom')}">
+        <a href="#/base/filtros/custom">Custom</a>
+    </li>
+</ul>
+<div app-view-segment="2" class="anim"></div>
