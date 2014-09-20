@@ -439,14 +439,19 @@ border-color: #96494b;
 
 .nav > li > a {
     border-radius: 3px;
-    /* padding: 4px 12px; */
+    padding: 4px 12px !important;
     color: #F0F1F1;
 }
 .nav > li.active > a,.nav > li.active:hover > a,.nav > li.active:active > a {
     background-color: #373838;
     border-radius: 3px;
-    /* padding: 4px 12px; */
+    padding: 4px 12px !important;
 }
+
+.nav-list>li>a, .nav-list .nav-header {
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
 .nav > li > a:hover,
 .nav > li > a:focus {
   color: #c6c8c8;

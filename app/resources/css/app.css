@@ -1,3 +1,9 @@
+body {
+    overflow-x: hidden;
+}
+.footer {
+    margin-top:80px;
+}
 #content {
     margin-top: 60px;
 }
@@ -41,13 +47,4 @@
     background-color: #1b1b1b;
     border: 0;
 }
-.prettyprint ol.linenums {
-    padding:0;
-    margin:6px;
-}
-.prettyprint {
-    font-size:9pt;
-}
-.prettyprint ol.linenums li {
-    line-height: 12pt;
-}
+

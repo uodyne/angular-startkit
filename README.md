@@ -5,6 +5,9 @@ AngularJS
 + angular-route
 + angular-animate
 + angular-route-segment
++ angular-bootstrap
++ google-code-prettify
++ bootstrap (for css only)
 
 NodeJS
 + Express

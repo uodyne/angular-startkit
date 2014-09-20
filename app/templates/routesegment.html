@@ -1,117 +1,121 @@
-<h2>angular-route-segment</h2>
+<div class="row">
+    <div class="col-xs-12">
+        <h2>angular-route-segment</h2>
 
-<div style="height:150px; border:1px solid #aaa; padding:8px; float:none; text-align:center;">
-    level1<br/>
-    <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
-    <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
-    <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
-    <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
-    <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
-    <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
-    <br/>
-    <div style="height:100px; border:1px solid #aaa; padding:8px; text-align:center;">
-        level1.sublevel1<br/>
-        <div style="width:80%; float:right; height:60px; border:1px solid #aaa; padding:8px; text-align:center;">
-            level1.sublevel1.subsublevel1<br/>
+        <div style="height:150px; border:1px solid #aaa; padding:8px; float:none; text-align:center;">
+            level1<br/>
+            <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
+            <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
+            <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
+            <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
+            <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
+            <div style="width:15%; float:left; height:4px; border:1px solid #aaa; padding:0px; text-align:center; margin-right:1%;"></div>
+            <br/>
+            <div style="height:100px; border:1px solid #aaa; padding:8px; text-align:center;">
+                level1.sublevel1<br/>
+                <div style="width:80%; float:right; height:60px; border:1px solid #aaa; padding:8px; text-align:center;">
+                    level1.sublevel1.subsublevel1<br/>
+                </div>
+                <div style="width:14%; float:left; height:60px; border:1px solid #aaa; padding:8px; text-align:center;">
+                </div>
+            </div>
         </div>
-        <div style="width:14%; float:left; height:60px; border:1px solid #aaa; padding:8px; text-align:center;">
-        </div>
+        <br/>
+
+        <pre class="prettyprint">
+        var app = angular.module('myapp', ['ngRoute', 'route-segment', 'view-segment']);
+        app.config(function($routeSegmentProvider, $routeProvider) {
+
+            $routeSegmentProvider.options.autoLoadTemplates = true;
+
+            $routeSegmentProvider
+                    .when(&#039;/level0&#039;, &#039;level0&#039;)
+                    .when(&#039;/level1&#039;, &#039;level1&#039;)
+                    .segment(&#039;level1&#039;, {
+                        template&shy;rl: &#039;templates/level1.html&#039;,
+                        controller: &#039;Level1Ctrl&#039;})
+                        .within()
+                            .segment(&#039;sublevel1&#039;, {
+                                default: true,
+                                template&shy;rl: &#039;templates/level1/sublevel1.html&#039;})
+                            .segment(&#039;sublevel2&#039;, {
+                                default: true,
+                                template&shy;rl: &#039;templates/level1/sublevel2.html&#039;})
+                        .up()
+
+            $routeSegmentProvider
+                .when(&#039;/level1/sublevel1/subsublevel1&#039;, &#039;level1.sublevel1.subsublevel1&#039;)  
+                within(&#039;level1&#039;)
+                    .within(&#039;sublevel1&#039;)
+                        .segment(&#039;subsublevel1&#039;, {
+                            default: true, template&shy;rl: &#039;templates/level1/sublevel1/subsublevel1.html&#039;
+                        })
+                        .segment(&#039;subsublevel2&#039;, {
+                            template&shy;rl: &#039;templates/level1/sublevel1/subsublevel2.html&#039;
+                        })
+
+            $routeProvider.otherwise({redirectTo: &#039;/level0&#039;}); 
+        }) ;
+        </pre>
+
+        <h3>level1.html</h3>
+        <pre class="prettyprint">
+            &lt;ul class=&quot;nav&quot;&gt;
+                &lt;li ng-class=&quot;{active: $routeSegment.startsWith(&#039;level0&#039;)}&quot;&gt;
+                    &lt;a href=&quot;#{{&#039;level0&#039; | routeSegment&shy;rl} }&quot;&gt;Level 0&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li ng-class=&quot;{active: $routeSegment.startsWith(&#039;level1&#039;)}&quot;&gt;
+                    &lt;a href=&quot;#{{&#039;level1&#039; | routeSegment&shy;rl} }&quot;&gt;Level 1&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;row&quot; app-view-segment=&quot;0&quot;&gt;&lt;/div&gt;
+        </pre>
+
+
+        <h3>sublevel1.html</h3>
+        <pre class="prettyprint">
+           &lt;ul class=&quot;nav nav-list&quot;&gt;
+                &lt;li ng-class=&quot;{active: $routeSegment.startsWith(&#039;level1.sublevel1&#039;)}&quot;&gt;
+                    &lt;a href=&quot;#{{ &#039;level1.sublevel1&#039; | routeSegment&shy;rl } }&quot;&gt;Sub Level 1&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li ng-class=&quot;{active: $routeSegment.startsWith(&#039;level1.sublevel2&#039;)}&quot;&gt;
+                    &lt;a href=&quot;#{{ &#039;level1.sublevel2&#039; | routeSegment&shy;rl } }&quot;&gt;Sub Level 2&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;row&quot; app-view-segment=&quot;1&quot;&gt;&lt;/div&gt;
+        </pre>
+
+
+        <h3>subsublevel1.html</h3>
+        <pre class="prettyprint">
+           &lt;ul class=&quot;nav nav-tabs&quot;&gt;
+                &lt;li ng-class=&quot;{active: $routeSegment.contains(&#039;subsublevel1&#039;)}&quot;&gt;
+                    &lt;a href=&quot;#/level1/sublevel1/subsublevel1&quot;&gt;Sub Sub Level 1&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li ng-class=&quot;{active: $routeSegment.contains(&#039;subsublevel2&#039;)}&quot;&gt;
+                    &lt;a href=&quot;#/level1/sublevel1/subsublevel2&quot;&gt;Sub Sub Level 2&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;row&quot; app-view-segment=&quot;2&quot;&gt;&lt;/div&gt;
+        </pre>
+
+
+        <h3>more...</h3>
+        <pre class="prettyprint">
+        ...
+        .segment(&#039;level1&#039;, {
+            template&shy;rl: &#039;templates/level1/sublevel1.html&#039;,
+            resolve:{
+                data:function(loader){
+                    alert(&quot;loaded!&quot;);
+                }
+            },
+            untilResolved:{
+                template&shy;rl:&#039;templates/loading.html&#039;
+            }
+        })
+        ...
+        </pre>
     </div>
 </div>
-<br/>
-
-<pre class="prettyprint">
-var app = angular.module('myapp', ['ngRoute', 'route-segment', 'view-segment']);
-app.config(function($routeSegmentProvider, $routeProvider) {
-    
-    $routeSegmentProvider.options.autoLoadTemplates = true;
-    
-    $routeSegmentProvider
-            .when(&#039;/level0&#039;, &#039;level0&#039;)
-            .when(&#039;/level1&#039;, &#039;level1&#039;)
-            .segment(&#039;level1&#039;, {
-                template&shy;rl: &#039;templates/level1.html&#039;,
-                controller: &#039;Level1Ctrl&#039;})
-                .within()
-                    .segment(&#039;sublevel1&#039;, {
-                        default: true,
-                        template&shy;rl: &#039;templates/level1/sublevel1.html&#039;})
-                    .segment(&#039;sublevel2&#039;, {
-                        default: true,
-                        template&shy;rl: &#039;templates/level1/sublevel2.html&#039;})
-                .up()
-    
-    $routeSegmentProvider
-        .when(&#039;/level1/sublevel1/subsublevel1&#039;, &#039;level1.sublevel1.subsublevel1&#039;)  
-        within(&#039;level1&#039;)
-            .within(&#039;sublevel1&#039;)
-                .segment(&#039;subsublevel1&#039;, {
-                    default: true, template&shy;rl: &#039;templates/level1/sublevel1/subsublevel1.html&#039;
-                })
-                .segment(&#039;subsublevel2&#039;, {
-                    template&shy;rl: &#039;templates/level1/sublevel1/subsublevel2.html&#039;
-                })
-    
-    $routeProvider.otherwise({redirectTo: &#039;/level0&#039;}); 
-}) ;
-</pre>
-
-<h3>level1.html</h3>
-<pre class="prettyprint">
-    &lt;ul class=&quot;nav&quot;&gt;
-        &lt;li ng-class=&quot;{active: $routeSegment.startsWith(&#039;level0&#039;)}&quot;&gt;
-            &lt;a href=&quot;#{{&#039;level0&#039; | routeSegment&shy;rl} }&quot;&gt;Level 0&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li ng-class=&quot;{active: $routeSegment.startsWith(&#039;level1&#039;)}&quot;&gt;
-            &lt;a href=&quot;#{{&#039;level1&#039; | routeSegment&shy;rl} }&quot;&gt;Level 1&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class=&quot;row&quot; app-view-segment=&quot;0&quot;&gt;&lt;/div&gt;
-</pre>
-
-
-<h3>sublevel1.html</h3>
-<pre class="prettyprint">
-   &lt;ul class=&quot;nav nav-list&quot;&gt;
-        &lt;li ng-class=&quot;{active: $routeSegment.startsWith(&#039;level1.sublevel1&#039;)}&quot;&gt;
-            &lt;a href=&quot;#{{ &#039;level1.sublevel1&#039; | routeSegment&shy;rl } }&quot;&gt;Sub Level 1&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li ng-class=&quot;{active: $routeSegment.startsWith(&#039;level1.sublevel2&#039;)}&quot;&gt;
-            &lt;a href=&quot;#{{ &#039;level1.sublevel2&#039; | routeSegment&shy;rl } }&quot;&gt;Sub Level 2&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class=&quot;row&quot; app-view-segment=&quot;1&quot;&gt;&lt;/div&gt;
-</pre>
-
-
-<h3>subsublevel1.html</h3>
-<pre class="prettyprint">
-   &lt;ul class=&quot;nav nav-tabs&quot;&gt;
-        &lt;li ng-class=&quot;{active: $routeSegment.contains(&#039;subsublevel1&#039;)}&quot;&gt;
-            &lt;a href=&quot;#/level1/sublevel1/subsublevel1&quot;&gt;Sub Sub Level 1&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li ng-class=&quot;{active: $routeSegment.contains(&#039;subsublevel2&#039;)}&quot;&gt;
-            &lt;a href=&quot;#/level1/sublevel1/subsublevel2&quot;&gt;Sub Sub Level 2&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class=&quot;row&quot; app-view-segment=&quot;2&quot;&gt;&lt;/div&gt;
-</pre>
-
-
-<h3>more...</h3>
-<pre class="prettyprint">
-...
-.segment(&#039;level1&#039;, {
-    template&shy;rl: &#039;templates/level1/sublevel1.html&#039;,
-    resolve:{
-        data:function(loader){
-            alert(&quot;loaded!&quot;);
-        }
-    },
-    untilResolved:{
-        template&shy;rl:&#039;templates/loading.html&#039;
-    }
-})
-...
-</pre>
 

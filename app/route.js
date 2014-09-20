@@ -16,7 +16,7 @@ app.config(function($routeSegmentProvider, $routeProvider) {
         .segment('base', {
             templateUrl: 'templates/base.html',
             resolve:{data:function(loader){loader.show=true;}},
-            controller: 'MainCtrl'})
+            controller: 'MyappCtrl'})
             .within()
                 .segment('helloworld', {
                     default: true,
