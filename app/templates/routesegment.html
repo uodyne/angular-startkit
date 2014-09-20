@@ -97,3 +97,21 @@ app.config(function($routeSegmentProvider, $routeProvider) {
     &lt;div class=&quot;row&quot; app-view-segment=&quot;2&quot;&gt;&lt;/div&gt;
 </pre>
 
+
+<h3>more...</h3>
+<pre class="prettyprint">
+...
+.segment(&#039;level1&#039;, {
+    template&shy;rl: &#039;templates/level1/sublevel1.html&#039;,
+    resolve:{
+        data:function(loader){
+            alert(&quot;loaded!&quot;);
+        }
+    },
+    untilResolved:{
+        template&shy;rl:&#039;templates/loading.html&#039;
+    }
+})
+...
+</pre>
+
