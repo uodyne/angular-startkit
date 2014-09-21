@@ -8,4 +8,5 @@ app.directive('prettyprint', function() {
               element.html(prettyPrintOne(element.html(),'',true));
         }
     };
+  
 });

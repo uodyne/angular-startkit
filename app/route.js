@@ -10,6 +10,8 @@ app.config(function($routeSegmentProvider, $routeProvider) {
         .when('/base/directivas',   'base.directivas')
         .when('/base/filtros',      'base.filtros')
         .segment('home', {
+            default: true, 
+            controller: 'TodoController',
             templateUrl: 'templates/home.html',
             resolve:{data:function(loader){loader.show=true;}}
             })
@@ -53,7 +55,7 @@ app.config(function($routeSegmentProvider, $routeProvider) {
         .when('/base/directivas/ngrepeat', 'base.directivas.ngrepeat')  
         .within('base')
             .within('directivas')
-                .segment('interpolation', {default: true, templateUrl: 'templates/base/directivas/interpolation.html'})
+                .segment('interpolation', {default: true, templateUrl: 'templates/base/directivas/interpolation.html', resolve:{data:function(loader){loader.show=true;}},untilResolved:{templateUrl:'templates/loading.html'}})
                 .segment('ngbind', {templateUrl: 'templates/base/directivas/ngbind.html', resolve:{data:function(loader){loader.show=true;}},untilResolved:{templateUrl:'templates/loading.html'}})
                 .segment('ngshowhide', {templateUrl: 'templates/base/directivas/ngshowhide.html', resolve:{data:function(loader){loader.show=true;}},untilResolved:{templateUrl:'templates/loading.html'}})
                 .segment('ngswitch', {templateUrl: 'templates/base/directivas/ngswitch.html', resolve:{data:function(loader){loader.show=true;}},untilResolved:{templateUrl:'templates/loading.html'}})

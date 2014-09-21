@@ -35,3 +35,6 @@ app/components
 tmp
 !.gitkeep
 .idea
+
+# Less
+app/resources/less
