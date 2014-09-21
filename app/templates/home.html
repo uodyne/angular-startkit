@@ -2,24 +2,31 @@
     <div class="col-xs-12">
         <h2>Home</h2>
         
-        <div class="container">
+        <div class="well">
           <section class="app-body">
             <section class="archive-control">
-              <span>{{ remaining() }} of {{ todos.length }} remaining</span>
-              <p>[ <a href="" data-ng-click="archive()">Remove Completed Items</a> ]</p>
+             <div class="row">
+              <div class="col-sm-6">
+                <span>{{ remaining() }} of {{ todos.length }} remaining</span>  
+              </div>
+              <div class="col-sm-6 text-right">
+                <a href="" data-ng-click="archive()">Remove Completed Items</a>
+              </div>
+             </div>
+              
+              
             </section>
 
-            <ul class="unstyled">
-              <li data-ng-repeat="todo in todos track by $index">
-                <input type="checkbox" data-ng-model="todo.done">
-                <span class="done-{{ todo.done }}">{{ todo.text }}</span>
+            <ul class="unstyled list-group">
+              <li class="form-control" data-ng-repeat="todo in todos track by $index" class="list-group-item">
+                <label class="done-{{ todo.done }}"><input type="checkbox" data-ng-model="todo.done"> {{ todo.text }}</label>
               </li>
             </ul>
 
             <form data-ng-submit="addTodo()" class="todo-form">
-              <input type="text" data-ng-model="todoText" placeholder="Enter new ToDo item" />
+              <input type="text" class="form-control" data-ng-model="todoText" placeholder="Enter new ToDo item" />
               <br />
-              <input type="submit" value="Add Task" />
+              <input type="submit" class="btn btn-primary" value="Add Task" />
             </form>
           </section>
         </div>

@@ -6437,6 +6437,16 @@ label,
   background-color: #222324;
   color: #ebebeb;
 }
+.content {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+@media (max-width: 768px) {
+  .content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 .thumbnail {
   background-color: #2a2a2c;
   border: none;
