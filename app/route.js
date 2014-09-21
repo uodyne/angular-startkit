@@ -6,6 +6,7 @@ app.config(function($routeSegmentProvider, $routeProvider) {
         .when('/home', 'home')
         .when('/base', 'base')
         .when('/routesegment', 'routesegment')
+        .when('/uodynetheme', 'uodynetheme')
         .when('/base/helloworld',   'base.helloworld')
         .when('/base/directivas',   'base.directivas')
         .when('/base/filtros',      'base.filtros')
@@ -13,6 +14,10 @@ app.config(function($routeSegmentProvider, $routeProvider) {
             default: true, 
             controller: 'TodoController',
             templateUrl: 'templates/home.html',
+            resolve:{data:function(loader){loader.show=true;}}
+            })
+        .segment('uodynetheme', {
+            templateUrl: 'templates/uodynetheme.html',
             resolve:{data:function(loader){loader.show=true;}}
             })
         .segment('base', {

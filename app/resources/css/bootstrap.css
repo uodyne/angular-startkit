@@ -1,4 +1,3 @@
-@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
 /*!
  * bootswatch v3.2.0
  * Homepage: http://bootswatch.com
@@ -889,9 +888,9 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.42857143;
+  font-family: "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.22857143;
   color: #ebebeb;
   background-color: #48494c;
 }
@@ -938,7 +937,7 @@ img {
 }
 .img-thumbnail {
   padding: 4px;
-  line-height: 1.42857143;
+  line-height: 1.22857143;
   background-color: #48494c;
   border: 1px solid #dddddd;
   border-radius: 0;
@@ -954,8 +953,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin-top: 14px;
+  margin-bottom: 14px;
   border: 0;
   border-top: 1px solid #3f4143;
 }
@@ -991,7 +990,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.1;
   color: inherit;
 }
@@ -1029,8 +1028,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 21px;
-  margin-bottom: 10.5px;
+  margin-top: 14px;
+  margin-bottom: 7px;
 }
 h1 small,
 .h1 small,
@@ -1052,8 +1051,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 10.5px;
-  margin-bottom: 10.5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 h4 small,
 .h4 small,
@@ -1071,45 +1070,45 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 39px;
+  font-size: 31px;
 }
 h2,
 .h2 {
-  font-size: 32px;
+  font-size: 25px;
 }
 h3,
 .h3 {
-  font-size: 26px;
+  font-size: 21px;
 }
 h4,
 .h4 {
-  font-size: 19px;
+  font-size: 15px;
 }
 h5,
 .h5 {
-  font-size: 15px;
+  font-size: 12px;
 }
 h6,
 .h6 {
-  font-size: 13px;
+  font-size: 11px;
 }
 p {
-  margin: 0 0 10.5px;
+  margin: 0 0 7px;
 }
 .lead {
-  margin-bottom: 21px;
-  font-size: 17px;
+  margin-bottom: 14px;
+  font-size: 13px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 22.5px;
+    font-size: 18px;
   }
 }
 small,
 .small {
-  font-size: 86%;
+  font-size: 91%;
 }
 cite {
   font-style: normal;
@@ -1208,14 +1207,14 @@ a.bg-danger:hover {
   background-color: #c9302c;
 }
 .page-header {
-  padding-bottom: 9.5px;
-  margin: 42px 0 21px;
+  padding-bottom: 6px;
+  margin: 28px 0 14px;
   border-bottom: 1px solid #ebebeb;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10.5px;
+  margin-bottom: 7px;
 }
 ul ul,
 ol ul,
@@ -1239,11 +1238,11 @@ ol ol {
 }
 dl {
   margin-top: 0;
-  margin-bottom: 21px;
+  margin-bottom: 14px;
 }
 dt,
 dd {
-  line-height: 1.42857143;
+  line-height: 1.22857143;
 }
 dt {
   font-weight: bold;
@@ -1275,9 +1274,9 @@ abbr[data-original-title] {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 10.5px 21px;
-  margin: 0 0 21px;
-  font-size: 18.75px;
+  padding: 7px 14px;
+  margin: 0 0 14px;
+  font-size: 15px;
   border-left: 5px solid #3f4143;
 }
 blockquote p:last-child,
@@ -1290,7 +1289,7 @@ blockquote small,
 blockquote .small {
   display: block;
   font-size: 80%;
-  line-height: 1.42857143;
+  line-height: 1.22857143;
   color: #ebebeb;
 }
 blockquote footer:before,
@@ -1327,9 +1326,9 @@ blockquote:after {
   content: "";
 }
 address {
-  margin-bottom: 21px;
+  margin-bottom: 14px;
   font-style: normal;
-  line-height: 1.42857143;
+  line-height: 1.22857143;
 }
 code,
 kbd,
@@ -1359,10 +1358,10 @@ kbd kbd {
 }
 pre {
   display: block;
-  padding: 10px;
-  margin: 0 0 10.5px;
-  font-size: 14px;
-  line-height: 1.42857143;
+  padding: 6.5px;
+  margin: 0 0 7px;
+  font-size: 11px;
+  line-height: 1.22857143;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -2058,7 +2057,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 21px;
+  margin-bottom: 14px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -2066,8 +2065,8 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 6px;
-  line-height: 1.42857143;
+  padding: 4px;
+  line-height: 1.22857143;
   vertical-align: top;
   border-top: 1px solid #3f4143;
 }
@@ -2095,7 +2094,7 @@ th {
 .table-condensed > thead > tr > td,
 .table-condensed > tbody > tr > td,
 .table-condensed > tfoot > tr > td {
-  padding: 3px;
+  padding: 2px;
 }
 .table-bordered {
   border: 1px solid #3f4143;
@@ -2239,7 +2238,7 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
-    margin-bottom: 15.75px;
+    margin-bottom: 10.5px;
     overflow-y: hidden;
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -2293,8 +2292,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 21px;
-  font-size: 22.5px;
+  margin-bottom: 14px;
+  font-size: 18px;
   line-height: inherit;
   color: #ebebeb;
   border: 0;
@@ -2337,18 +2336,18 @@ input[type="checkbox"]:focus {
 }
 output {
   display: block;
-  padding-top: 9px;
-  font-size: 15px;
-  line-height: 1.42857143;
+  padding-top: 7px;
+  font-size: 12px;
+  line-height: 1.22857143;
   color: #48494c;
 }
 .form-control {
   display: block;
   width: 100%;
-  height: 39px;
-  padding: 8px 16px;
-  font-size: 15px;
-  line-height: 1.42857143;
+  height: 28px;
+  padding: 6px 14px;
+  font-size: 12px;
+  line-height: 1.22857143;
   color: #48494c;
   background-color: #ffffff;
   background-image: none;
@@ -2393,20 +2392,20 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 39px;
-  line-height: 1.42857143 \0;
+  line-height: 28px;
+  line-height: 1.22857143 \0;
 }
 input[type="date"].input-sm,
 input[type="time"].input-sm,
 input[type="datetime-local"].input-sm,
 input[type="month"].input-sm {
-  line-height: 31px;
+  line-height: 22px;
 }
 input[type="date"].input-lg,
 input[type="time"].input-lg,
 input[type="datetime-local"].input-lg,
 input[type="month"].input-lg {
-  line-height: 52px;
+  line-height: 42px;
 }
 .form-group {
   margin-bottom: 15px;
@@ -2415,7 +2414,7 @@ input[type="month"].input-lg {
 .checkbox {
   position: relative;
   display: block;
-  min-height: 21px;
+  min-height: 14px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -2473,8 +2472,8 @@ fieldset[disabled] .checkbox label {
   cursor: not-allowed;
 }
 .form-control-static {
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   margin-bottom: 0;
 }
 .form-control-static.input-lg,
@@ -2484,15 +2483,15 @@ fieldset[disabled] .checkbox label {
 }
 .input-sm,
 .form-horizontal .form-group-sm .form-control {
-  height: 31px;
-  padding: 5px 10px;
-  font-size: 13px;
-  line-height: 1.5;
+  height: 22px;
+  padding: 3px 8px;
+  font-size: 11px;
+  line-height: 1.3;
   border-radius: 0;
 }
 select.input-sm {
-  height: 31px;
-  line-height: 31px;
+  height: 22px;
+  line-height: 22px;
 }
 textarea.input-sm,
 select[multiple].input-sm {
@@ -2500,15 +2499,15 @@ select[multiple].input-sm {
 }
 .input-lg,
 .form-horizontal .form-group-lg .form-control {
-  height: 52px;
-  padding: 12px 24px;
-  font-size: 19px;
+  height: 42px;
+  padding: 10px 22px;
+  font-size: 15px;
   line-height: 1.33;
   border-radius: 0;
 }
 select.input-lg {
-  height: 52px;
-  line-height: 52px;
+  height: 42px;
+  line-height: 42px;
 }
 textarea.input-lg,
 select[multiple].input-lg {
@@ -2518,28 +2517,28 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 48.75px;
+  padding-right: 35px;
 }
 .form-control-feedback {
   position: absolute;
-  top: 26px;
+  top: 19px;
   right: 0;
   z-index: 2;
   display: block;
-  width: 39px;
-  height: 39px;
-  line-height: 39px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   text-align: center;
 }
 .input-lg + .form-control-feedback {
-  width: 52px;
-  height: 52px;
-  line-height: 52px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
 }
 .input-sm + .form-control-feedback {
-  width: 31px;
-  height: 31px;
-  line-height: 31px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
 }
 .has-success .help-block,
 .has-success .control-label,
@@ -2681,11 +2680,11 @@ select[multiple].input-lg {
 .form-horizontal .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 9px;
+  padding-top: 7px;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 30px;
+  min-height: 21px;
 }
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -2695,7 +2694,7 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 9px;
+    padding-top: 7px;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -2704,27 +2703,27 @@ select[multiple].input-lg {
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
-    padding-top: 16.96px;
+    padding-top: 14.3px;
   }
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
-    padding-top: 6px;
+    padding-top: 4px;
   }
 }
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: normal;
+  font-weight: 300;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 8px 16px;
-  font-size: 15px;
-  line-height: 1.42857143;
+  padding: 6px 14px;
+  font-size: 12px;
+  line-height: 1.22857143;
   border-radius: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3041,23 +3040,23 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 12px 24px;
-  font-size: 19px;
+  padding: 10px 22px;
+  font-size: 15px;
   line-height: 1.33;
   border-radius: 0;
 }
 .btn-sm,
 .btn-group-sm > .btn {
-  padding: 5px 10px;
-  font-size: 13px;
-  line-height: 1.5;
+  padding: 3px 8px;
+  font-size: 11px;
+  line-height: 1.3;
   border-radius: 0;
 }
 .btn-xs,
 .btn-group-xs > .btn {
-  padding: 1px 5px;
-  font-size: 13px;
-  line-height: 1.5;
+  padding: 1px 3px;
+  font-size: 11px;
+  line-height: 1.3;
   border-radius: 0;
 }
 .btn-block {
@@ -3128,7 +3127,7 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 15px;
+  font-size: 12px;
   text-align: left;
   background-color: #3f4143;
   border: 1px solid transparent;
@@ -3143,7 +3142,7 @@ tbody.collapse.in {
 }
 .dropdown-menu .divider {
   height: 1px;
-  margin: 9.5px 0;
+  margin: 6px 0;
   overflow: hidden;
   background-color: #48494c;
 }
@@ -3152,7 +3151,7 @@ tbody.collapse.in {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.42857143;
+  line-height: 1.22857143;
   color: #ebebeb;
   white-space: nowrap;
 }
@@ -3200,8 +3199,8 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 13px;
-  line-height: 1.42857143;
+  font-size: 11px;
+  line-height: 1.22857143;
   color: #48494c;
   white-space: nowrap;
 }
@@ -3430,17 +3429,17 @@ tbody.collapse.in {
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 52px;
-  padding: 12px 24px;
-  font-size: 19px;
+  height: 42px;
+  padding: 10px 22px;
+  font-size: 15px;
   line-height: 1.33;
   border-radius: 0;
 }
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
-  height: 52px;
-  line-height: 52px;
+  height: 42px;
+  line-height: 42px;
 }
 textarea.input-group-lg > .form-control,
 textarea.input-group-lg > .input-group-addon,
@@ -3453,17 +3452,17 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
-  height: 31px;
-  padding: 5px 10px;
-  font-size: 13px;
-  line-height: 1.5;
+  height: 22px;
+  padding: 3px 8px;
+  font-size: 11px;
+  line-height: 1.3;
   border-radius: 0;
 }
 select.input-group-sm > .form-control,
 select.input-group-sm > .input-group-addon,
 select.input-group-sm > .input-group-btn > .btn {
-  height: 31px;
-  line-height: 31px;
+  height: 22px;
+  line-height: 22px;
 }
 textarea.input-group-sm > .form-control,
 textarea.input-group-sm > .input-group-addon,
@@ -3490,8 +3489,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: middle;
 }
 .input-group-addon {
-  padding: 8px 16px;
-  font-size: 15px;
+  padding: 6px 14px;
+  font-size: 12px;
   font-weight: normal;
   line-height: 1;
   color: #48494c;
@@ -3501,13 +3500,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 0;
 }
 .input-group-addon.input-sm {
-  padding: 5px 10px;
-  font-size: 13px;
+  padding: 3px 8px;
+  font-size: 11px;
   border-radius: 0;
 }
 .input-group-addon.input-lg {
-  padding: 12px 24px;
-  font-size: 19px;
+  padding: 10px 22px;
+  font-size: 15px;
   border-radius: 0;
 }
 .input-group-addon input[type="radio"],
@@ -3601,7 +3600,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav .nav-divider {
   height: 1px;
-  margin: 9.5px 0;
+  margin: 6px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -3617,7 +3616,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-tabs > li > a {
   margin-right: 2px;
-  line-height: 1.42857143;
+  line-height: 1.22857143;
   border: 1px solid transparent;
   border-radius: 0 0 0 0;
 }
@@ -3759,7 +3758,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 40px;
-  margin-bottom: 21px;
+  margin-bottom: 14px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -3866,9 +3865,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 9.5px 15px;
-  font-size: 19px;
-  line-height: 21px;
+  padding: 13px 15px;
+  font-size: 15px;
+  line-height: 14px;
   height: 40px;
 }
 .navbar-brand:hover,
@@ -3911,12 +3910,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 4.75px -15px;
+  margin: 6.5px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 21px;
+  line-height: 14px;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -3933,7 +3932,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding: 5px 15px 5px 25px;
   }
   .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 21px;
+    line-height: 14px;
   }
   .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -3949,8 +3948,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 9.5px;
-    padding-bottom: 9.5px;
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -3972,8 +3971,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 0.5px;
-  margin-bottom: 0.5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4052,20 +4051,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 0.5px;
-  margin-bottom: 0.5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 4.5px;
-  margin-bottom: 4.5px;
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
 .navbar-btn.btn-xs {
   margin-top: 9px;
   margin-bottom: 9px;
 }
 .navbar-text {
-  margin-top: 9.5px;
-  margin-bottom: 9.5px;
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 @media (min-width: 768px) {
   .navbar-text {
@@ -4277,7 +4276,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 21px;
+  margin-bottom: 14px;
   list-style: none;
   background-color: #3f4143;
   border-radius: 0;
@@ -4296,7 +4295,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 21px 0;
+  margin: 14px 0;
   border-radius: 0;
 }
 .pagination > li {
@@ -4306,8 +4305,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 8px 16px;
-  line-height: 1.42857143;
+  padding: 6px 14px;
+  line-height: 1.22857143;
   text-decoration: none;
   color: #ebebeb;
   background-color: #3f4143;
@@ -4358,8 +4357,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-lg > li > a,
 .pagination-lg > li > span {
-  padding: 12px 24px;
-  font-size: 19px;
+  padding: 10px 22px;
+  font-size: 15px;
 }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -4373,8 +4372,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-sm > li > a,
 .pagination-sm > li > span {
-  padding: 5px 10px;
-  font-size: 13px;
+  padding: 3px 8px;
+  font-size: 11px;
 }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
@@ -4388,7 +4387,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pager {
   padding-left: 0;
-  margin: 21px 0;
+  margin: 14px 0;
   list-style: none;
   text-align: center;
 }
@@ -4495,7 +4494,7 @@ a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 300;
   color: #ebebeb;
   line-height: 1;
@@ -4542,7 +4541,7 @@ a.list-group-item.active > .badge,
 }
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 200;
 }
 .jumbotron > hr {
@@ -4565,14 +4564,14 @@ a.list-group-item.active > .badge,
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 67.5px;
+    font-size: 54px;
   }
 }
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 21px;
-  line-height: 1.42857143;
+  margin-bottom: 14px;
+  line-height: 1.22857143;
   background-color: #48494c;
   border: 1px solid #dddddd;
   border-radius: 0;
@@ -4596,7 +4595,7 @@ a.thumbnail.active {
 }
 .alert {
   padding: 15px;
-  margin-bottom: 21px;
+  margin-bottom: 14px;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -4687,8 +4686,8 @@ a.thumbnail.active {
 }
 .progress {
   overflow: hidden;
-  height: 21px;
-  margin-bottom: 21px;
+  height: 14px;
+  margin-bottom: 14px;
   background-color: #3f4143;
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -4698,8 +4697,8 @@ a.thumbnail.active {
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 13px;
-  line-height: 21px;
+  font-size: 11px;
+  line-height: 14px;
   color: #ffffff;
   text-align: center;
   background-color: #9ecff2;
@@ -4969,7 +4968,7 @@ a.list-group-item-danger.active:focus {
   line-height: 1.3;
 }
 .panel {
-  margin-bottom: 21px;
+  margin-bottom: 14px;
   background-color: #3f4143;
   border: 1px solid transparent;
   border-radius: 0;
@@ -4991,7 +4990,7 @@ a.list-group-item-danger.active:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 17px;
+  font-size: 14px;
   color: inherit;
 }
 .panel-title > a {
@@ -5147,7 +5146,7 @@ a.list-group-item-danger.active:focus {
   margin-bottom: 0;
 }
 .panel-group {
-  margin-bottom: 21px;
+  margin-bottom: 14px;
 }
 .panel-group .panel {
   margin-bottom: 0;
@@ -5325,7 +5324,7 @@ a.list-group-item-danger.active:focus {
 }
 .close {
   float: right;
-  font-size: 22.5px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 1;
   color: #ebebeb;
@@ -5414,14 +5413,14 @@ button.close {
 .modal-header {
   padding: 15px;
   border-bottom: 1px solid #48494c;
-  min-height: 16.42857143px;
+  min-height: 16.22857143px;
 }
 .modal-header .close {
   margin-top: -2px;
 }
 .modal-title {
   margin: 0;
-  line-height: 1.42857143;
+  line-height: 1.22857143;
 }
 .modal-body {
   position: relative;
@@ -5472,7 +5471,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-size: 13px;
+  font-size: 11px;
   line-height: 1.4;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -5597,7 +5596,7 @@ button.close {
 .popover-title {
   margin: 0;
   padding: 8px 14px;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: normal;
   line-height: 18px;
   background-color: #38393b;
@@ -6163,6 +6162,69 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+/* Open Sans @font-face kit */
+/* Font-Face */
+@font-face {
+  font-family: 'Proxima';
+  src: url(@{ProximaPath}/proximanova-regular-webfont.eot?1307578394);
+  src: url('../fonts/proxima/proximanova-regular-webfont.eot?iefix') format('eot'), url(@{ProximaPath}/proximanova-regular-webfont.woff?1307578394) format('woff'), url(@{ProximaPath}/proximanova-regular-webfont.ttf?1307578394) format('truetype'), url('../fonts/proxima/proximanova-regular-webfont.svg#webfont2rpW2ohz') format('svg');
+}
+@font-face {
+  font-family: 'Proxima';
+  font-style: italic;
+  src: url(@{ProximaPath}/proximanova-regitalic-webfont.eot?1307578394);
+  src: url('../fonts/proxima/proximanova-regitalic-webfont.eot?iefix') format('eot'), url(@{ProximaPath}/proximanova-regitalic-webfont.woff?1307578394) format('woff'), url(@{ProximaPath}/proximanova-regitalic-webfont.ttf?1307578394) format('truetype'), url('../fonts/proxima/proximanova-regitalic-webfont.svg#webfont2rpW2ohz') format('svg');
+}
+@font-face {
+  font-family: 'Proxima';
+  font-weight: 300;
+  src: url(@{ProximaPath}/proximanova-light-webfont.eot?1307578394);
+  src: url('../fonts/proxima/proximanova-light-webfont.eot?iefix') format('eot'), url(@{ProximaPath}/proximanova-light-webfont.woff?1307578394) format('woff'), url(@{ProximaPath}/proximanova-light-webfont.ttf?1307578394) format('truetype'), url('../fonts/proxima/proximanova-light-webfont.svg#webfont2rpW2ohz') format('svg');
+}
+@font-face {
+  font-family: 'Proxima';
+  font-weight: 600;
+  src: url(@{ProximaPath}/proximanova-semibold-webfont.eot?1307578394);
+  src: url('../fonts/proxima/proximanova-semibold-webfont.eot?iefix') format('eot'), url(@{ProximaPath}/proximanova-semibold-webfont.woff?1307578394) format('woff'), url(@{ProximaPath}/proximanova-semibold-webfont.ttf?1307578394) format('truetype'), url('../fonts/proxima/proximanova-semibold-webfont.svg#webfont2rpW2ohz') format('svg');
+}
+@font-face {
+  font-family: 'Proxima';
+  font-weight: 600;
+  font-style: italic;
+  src: url(@{ProximaPath}/proximanova-semibolditalic-webfont.eot?1307578394);
+  src: url('../fonts/proxima/proximanova-semibolditalic-webfont.eot?iefix') format('eot'), url(@{ProximaPath}/proximanova-semibolditalic-webfont.woff?1307578394) format('woff'), url(@{ProximaPath}/proximanova-semibolditalic-webfont.ttf?1307578394) format('truetype'), url('../fonts/proxima/proximanova-semibolditalic-webfont.svg#webfont2rpW2ohz') format('svg');
+}
+@font-face {
+  font-family: 'Proxima';
+  font-weight: bold;
+  src: url(@{ProximaPath}/proximanova-bold-webfont.eot?1307578394);
+  src: url('../fonts/proxima/proximanova-bold-webfont.eot?iefix') format('eot'), url(@{ProximaPath}/proximanova-bold-webfont.woff?1307578394) format('woff'), url(@{ProximaPath}/proximanova-bold-webfont.ttf?1307578394) format('truetype'), url('../fonts/proxima/proximanova-bold-webfont.svg#webfont2rpW2ohz') format('svg');
+}
+@font-face {
+  font-family: 'Proxima';
+  font-weight: bold;
+  font-style: italic;
+  src: url(@{ProximaPath}/proximanova-boldit-webfont.eot?1307578394);
+  src: url('../fonts/proxima/proximanova-boldit-webfont.eot?iefix') format('eot'), url(@{ProximaPath}/proximanova-boldit-webfont.woff?1307578394) format('woff'), url(@{ProximaPath}/proximanova-boldit-webfont.ttf?1307578394) format('truetype'), url('../fonts/proxima/proximanova-boldit-webfont.svg#webfont2rpW2ohz') format('svg');
+}
+@font-face {
+  font-family: 'Proxima';
+  font-weight: 900;
+  src: url(@{ProximaPath}/proximanova-extrabold-webfont.eot?1307578394);
+  src: url('../fonts/proxima/proximanova-extrabold-webfont.eot?iefix') format('eot'), url(@{ProximaPath}/proximanova-extrabold-webfont.woff?1307578394) format('woff'), url(@{ProximaPath}/proximanova-extrabold-webfont.ttf?1307578394) format('truetype'), url('../fonts/proxima/proximanova-extrabold-webfont.svg#webfont2rpW2ohz') format('svg');
+}
+body {
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 .navbar {
   -webkit-box-shadow: none;
